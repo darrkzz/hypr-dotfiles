@@ -1,0 +1,57 @@
+/*
+ __   __      _   _               ___               _    _ _       
+ \ \ / ___ __| |_| |_ ___ _ __   / __|_ _ __ _ _ __| |_ (_| |_ ___ 
+  \ V / -_(_-| / |  _/ _ | '_ \ | (_ | '_/ _` | '_ | ' \| |  _/ -_)
+   \_/\___/__|_\_\\__\___| .__/  \___|_| \__,_| .__|_||_|_|\__\___|
+                         |_|                  |_|                  
+*/
+
+/*
+  [  ] Autor : Darkz(darrkzz)
+  [  ] Github : @darrkzz
+*/
+
+:root {
+    --colors: on;
+
+    --text-0: var(--bg-4);
+    --text-1: #F2F2F2;
+    --text-2: #D0D0D0;
+    --text-3: #A0A0A0; 
+    --text-4: #A0A0A0; 
+    --text-5: #A0A0A0; 
+
+    --bg-1: #1E1E1E; 
+    --bg-2: #2A2A2A; 
+    --bg-3: #2A2A2A; 
+    --bg-4: #1E1E1E;
+
+    --hover: rgba(242, 242, 242, 0.05);  
+    --active: rgba(242, 242, 242, 0.07); 
+    --active-2: rgba(242, 242, 242, 0.10);
+    --message-hover: rgba(242, 242, 242, 0.04);
+
+    --accent-1: #F2F2F2;
+    --accent-2: #A0A0A0;
+    --accent-3: #3C3C3C;
+    --accent-4: #3F3F3F;
+    --accent-5: #D0D0D0;
+    --accent-new: #F2F2F2;
+
+    --mention: linear-gradient(to right, color-mix(in hsl, #A0A0A0, transparent 90%) 40%, transparent);
+    --mention-hover: linear-gradient(to right, color-mix(in hsl, #A0A0A0, transparent 95%) 40%, transparent);
+    --reply: linear-gradient(to right, color-mix(in hsl, #A0A0A0, transparent 90%) 40%, transparent);
+    --reply-hover: linear-gradient(to right, color-mix(in hsl, #A0A0A0, transparent 95%) 40%, transparent);
+
+    --online: #3d7c52;
+    --dnd: #a34545;
+    --idle: #a07b4d;
+    --streaming: #6d5d99;
+    --offline: #5a5a5a;
+
+    --border-light: var(--hover);
+    --border: var(--active);
+    --border-hover: var(--active);
+    --button-border: rgba(242, 242, 242, 0.10);
+}
+

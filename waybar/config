@@ -1,0 +1,102 @@
+// __      __         _                ___           __ _      
+// \ \    / __ _ _  _| |__ __ _ _ _   / __|___ _ _  / _(_)__ _ 
+//  \ \/\/ / _` | || | '_ / _` | '_| | (__/ _ | ' \|  _| / _` |
+//   \_/\_/\__,_|\_, |_.__\__,_|_|    \___\___|_||_|_| |_\__, |
+//               |__/                                    |___/ 
+
+//  [  ] Autor : Darkz(darrkzz)
+//  [  ] Github : @darrkzz
+
+{
+  "anchor": "center",
+  "clock": {
+    "format": "󰭦 {:%a %d,  %H:%M}",
+    "on-click": "gsimplecal",
+    "tooltip": true,
+    "tooltip-format": "{:%A, %d de %B de %Y}"
+  },
+  "custom/dunst": {
+    "format": "",
+    "on-click": "dunstctl history-pop",
+    "tooltip": false
+  },
+  "custom/launcher": {
+    "format": "",
+    "on-click": "rofi -show drun",
+    "tooltip": false
+  },
+  "custom/power": {
+    "format": "⏻",
+    "on-click": "wlogout --buttons-per-row 1"
+  },
+  "height": 40,
+  "hyprland/workspaces": {
+    "format": "{icon}",
+    "format-icons": {
+      "active": "",
+      "default": ""
+    },
+    "on-click": "activate",
+    "on-scroll-down": "hyprctl dispatch workspace r-1",
+    "on-scroll-up": "hyprctl dispatch workspace r+1",
+    "persistent-workspaces": {
+      "*": 3
+    }
+  },
+  "layer": "top",
+  "margin-bottom": 0,
+  "margin-left": 10,
+  "margin-right": 10,
+  "margin-top": 10,
+  "modules-center": [
+    "clock",
+    "custom/dunst"
+  ],
+  "modules-left": [
+    "custom/launcher",
+    "hyprland/workspaces",
+    "tray"
+  ],
+  "modules-right": [
+    "mpris",
+    "pulseaudio",
+    "network",
+    "custom/power"
+  ],
+  "mpris": {
+    "artist-len": 10,
+    "dynamic-len": 50,
+    "format": "󰐊 Reproduzindo : {title} - {artist}",
+    "format-paused": "󰏤 Pausado : {title} - {artist}",
+    "format-stopped": "󰓛 Parado : {tile} - {artist}",
+    "title-len": 15,
+    "tooltip": false
+  },
+  "network": {
+    "format-disconnected": "󰕑 Error 404",
+    "format-ethernet": "󰈀 Ethernet",
+    "format-wifi": "󰖩 {signalStrength}%",
+    "on-click": "nm-connection-editor"
+  },
+  "position": "top",
+  "pulseaudio": {
+    "format": "{icon} {volume}%",
+    "format-icons": {
+      "default": [
+        "󰕿",
+        "󰖀",
+        "󰕾"
+      ]
+    },
+    "format-muted": "󰟎 Mutado",
+    "on-click": "pamixer -t",
+    "on-click-right": "pavucontrol",
+    "on-scroll-down": "pamixer -d 5",
+    "on-scroll-up": "pamixer -i 5"
+  },
+  "reload_style_on_change": true,
+  "spacing": 8,
+  "tray": {
+    "spacing": 10
+  }
+}

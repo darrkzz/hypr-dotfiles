@@ -1,0 +1,73 @@
+/*
+  _____     _   _ _             _        __        __          _                
+ | ____|___| |_(_| | ___     __| | __ _  \ \      / __ _ _   _| |__   __ _ _ __ 
+ |  _| / __| __| | |/ _ \   / _` |/ _` |  \ \ /\ / / _` | | | | '_ \ / _` | '__|
+ | |___\__ | |_| | | (_) | | (_| | (_| |   \ V  V | (_| | |_| | |_) | (_| | |   
+ |_____|___/\__|_|_|\___/   \__,_|\__,_|    \_/\_/ \__,_|\__, |_.__/ \__,_|_|   
+                                                         |___/                  
+*/
+
+/*
+  [  ] Autor : Darkz(darrkzz)
+  [  ] Github : @darrkzz
+*/
+
+* {
+  font-family: "JetBrainsMono Nerd Font Propo", monospace;
+  font-size: 17px;
+  font-weight: bold;
+  border: none;
+  border-radius: 10px;
+  min-height: 20px;
+}
+
+window#waybar {
+  background-color: rgba(20, 20, 20, 0.0);
+  color: #D3D3D3;
+  border-radius: 10px;
+  /* border-bottom: 1px solid rgba(255, 255, 255, 0.1); */
+  padding: 100px 100px;
+}
+
+#custom-launcher,
+#custom-power,
+#custom-dunst,
+#clock,
+#network,
+#pulseaudio,
+#workspaces,
+#mpd {
+  padding: 0 10px;
+  background-color: rgba(20, 20, 20, 0.8);
+  min-width: 10px;
+}
+
+#custom-launcher {
+  color: #bbbbbb;
+}
+
+#custom-power:hover,
+#custom-dunst:hover,
+#clock:hover,
+#network:hover,
+#custom-launcher:hover,
+#pulseaudio:hover {
+  background-color: rgba(255, 255, 255, 0.08);
+}
+
+#workspaces button {
+  padding: 0 6px;
+  color: #888;
+}
+#workspaces button.active {
+  /*background: rgba(255, 255, 255, 0.1);*/
+  color: #ffffff;
+}
+
+#custom-dunst,
+#tray,
+#mpris {
+    padding: 0 10px;
+    color: #e0e0e0;
+    background-color: #333333;
+}

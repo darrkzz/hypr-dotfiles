@@ -1,0 +1,83 @@
+/* 
+  _____     _   _ _             _        __        ___                         _   
+ | ____|___| |_(_| | ___     __| | ___   \ \      / | | ___   __ _  ___  _   _| |_ 
+ |  _| / __| __| | |/ _ \   / _` |/ _ \   \ \ /\ / /| |/ _ \ / _` |/ _ \| | | | __|
+ | |___\__ | |_| | | (_) | | (_| | (_) |   \ V  V / | | (_) | (_| | (_) | |_| | |_ 
+ |_____|___/\__|_|_|\___/   \__,_|\___/     \_/\_/  |_|\___/ \__, |\___/ \__,_|\__|
+                                                             |___/                 
+*/
+
+/*
+  [  ] Autor : Darkz(darrkzz)
+  [  ] Github : @darrkzz
+*/
+
+window {
+    font-family: "JetBrains Mono Nerd Font";
+    font-size: 15pt;
+    color:  #F2F2F2;
+    background-color: rgba(30, 30, 30, 0.3);
+
+} 
+
+button {
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 35%;
+    background-color: #1E1E1E;
+    animation: gradient_f 20s ease-in infinite;
+    transition: all 0.3s ease-in;
+    box-shadow: 0 0 10px 2px transparent;
+    border-radius: 36px;
+    margin: 10px;
+}
+
+button:focus {
+    box-shadow: none;
+    background-size : 35%;
+    background-color: #2A2A2A;
+}
+
+button:hover {
+    background-size: 50%;
+    box-shadow: 0 0 10px 3px rgba(0,0,0,.4);
+    background-color: #F2F2F2;
+    color: transparent;
+    transition: all 0.3s cubic-bezier(.55, 0.0, .28, 1.682), box-shadow 0.5s ease-in;
+}
+
+#shutdown {
+    background-image: image(url("/home/darkz/.config/wlogout/icons/desligar.png"));
+}
+#shutdown:hover {
+  background-image: image(url("/home/darkz/.config/wlogout/icons/desligar-hover.png"));
+}
+
+#logout {
+    background-image: image(url("/home/darkz/.config/wlogout/icons/logout.png"));
+
+}
+#logout:hover {
+  background-image: image(url("/home/darkz/.config/wlogout/icons/logout-hover.png"));
+}
+
+#reboot {
+    background-image: image(url("/home/darkz/.config/wlogout/icons/reiniciar.png"));
+}
+#reboot:hover {
+  background-image: image(url("/home/darkz/.config/wlogout/icons/reiniciar-hover.png"));
+}
+
+#lock {
+    background-image: image(url("/home/darkz/.config/wlogout/icons/bloquear.png"));
+}
+#lock:hover {
+  background-image: image(url("/home/darkz/.config/wlogout/icons/bloquear-hover.png"));
+}
+
+#hibernate {
+    background-image: image(url("/home/darkz/.config/wlogout/icons/hibernar.png"));
+}
+#hibernate:hover {
+  background-image: image(url("/home/darkz/.config/wlogout/icons/hibernar-hover.png"));
+}

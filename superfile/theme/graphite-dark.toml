@@ -1,0 +1,42 @@
+#  ____                         __ _ _         ____                 _     _ _       
+# / ___| _   _ _ __   ___ _ __ / _(_| | ___   / ___|_ __ __ _ _ __ | |__ (_| |_ ___ 
+# \___ \| | | | '_ \ / _ | '__| |_| | |/ _ \ | |  _| '__/ _` | '_ \| '_ \| | __/ _ \
+#  ___) | |_| | |_) |  __| |  |  _| | |  __/ | |_| | | | (_| | |_) | | | | | ||  __/
+# |____/ \__,_| .__/ \___|_|  |_| |_|_|\___|  \____|_|  \__,_| .__/|_| |_|_|\__\___|
+#             |_|                                            |_|                    
+#
+
+#  [  ] Autor : Darkz(darrkzz)
+#  [  ] Github : @darrkzz
+
+[theme]
+name = "Graphite Dark"
+author = "Darkz"
+
+[colors]
+background = "#1e1e2e"
+foreground = "#d0d0e0"
+selection_background = "#2e2e3e"
+selection_foreground = "#b4befe"
+highlight = "#7aa2f7"
+border = "#4e4e5e"
+
+[colors.normal]
+black   = "#1e1e2e"
+red     = "#f38ba8"
+green   = "#a6e3a1"
+yellow  = "#f9e2af"
+blue    = "#7aa2f7"
+magenta = "#b4befe"
+cyan    = "#89dceb"
+white   = "#d0d0e0"
+
+[colors.bright]
+black   = "#3e3e4e"
+red     = "#f38ba8"
+green   = "#a6e3a1"
+yellow  = "#f9e2af"
+blue    = "#7aa2f7"
+magenta = "#b4befe"
+cyan    = "#94e2d5"
+white   = "#ffffff"

@@ -8,66 +8,366 @@
 */
 
 /*
-  [  ] Autor : Darkz(darrkzz)
+  [  ] Author : Darkz(darrkzz)
   [  ] Github : @darrkzz
 */
 
+/*
+   ___                       _ 
+  / __|___ _ _  ___ _ _ __ _| |
+ | (_ / -_| ' \/ -_| '_/ _` | |
+  \___\___|_||_\___|_| \__,_|_|
+
+*/
+
 * {
-  font-family: "JetBrainsMono Nerd Font Propo", monospace;
-  font-size: 17px;
-  font-weight: bold;
+  font-family: "JetBrainsMono Nerd Font";
+  font-size: 15px;
+  font-weight: normal;
   border: none;
-  border-radius: 10px;
-  min-height: 20px;
+  border-radius: 0px;
+  min-height: 30px;
 }
 
 window#waybar {
-  background-color: rgba(20, 20, 20, 0.0);
-  color: #D3D3D3;
-  border-radius: 10px;
-  /* border-bottom: 1px solid rgba(255, 255, 255, 0.1); */
-  padding: 100px 100px;
+  background-color: transparent;
+  color: #d3d3d3;
 }
 
 #custom-launcher,
-#custom-power,
-#custom-dunst,
-#clock,
-#network,
-#pulseaudio,
-#workspaces,
-#mpd {
-  padding: 0 10px;
-  background-color: rgba(20, 20, 20, 0.8);
-  min-width: 10px;
+#networkmod,
+#windowmod,
+#mediamod,
+#audiomod,
+#clockmod,
+#custom-swaync,
+#custom-power {
+  background-color: rgba(30, 30, 30, 1);
+  margin: 4px 4px 4px 0px;
+  border-radius: 8px;
 }
+
+
+/*
+  _                      _            
+ | |   __ _ _  _ _ _  __| |_  ___ _ _ 
+ | |__/ _` | || | ' \/ _| ' \/ -_| '_|
+ |____\__,_|\_,_|_||_\__|_||_\___|_|  
+
+ */
 
 #custom-launcher {
-  color: #bbbbbb;
+  color: #1e1e1e;
+  background-color: #f2f2f2;
+  padding: 1px 16px 1px 9px;
+  margin: 5px;
+  font-size: 20px;
 }
 
-#custom-power:hover,
-#custom-dunst:hover,
-#clock:hover,
-#network:hover,
-#custom-launcher:hover,
-#pulseaudio:hover {
-  background-color: rgba(255, 255, 255, 0.08);
+
+/*
+ __      __       _                          
+ \ \    / ___ _ _| |______ __ __ _ __ ___ ___
+  \ \/\/ / _ | '_| / (_-| '_ / _` / _/ -_(_-<
+   \_/\_/\___|_| |_\_/__| .__\__,_\__\___/__/
+                        |_|                  
+*/
+
+#workspaces {
+  background: #1e1e1e;
+  margin: 4px 4px 4px 0px;
+  padding: 1px 1px 1px 6px;
+  border-radius: 8px;
+  border: solid 1px #f2f2f2;
 }
 
 #workspaces button {
-  padding: 0 6px;
-  color: #888;
-}
-#workspaces button.active {
-  /*background: rgba(255, 255, 255, 0.1);*/
-  color: #ffffff;
+  color: #a0a0a0;
+  padding: 5px 12px 5px 10px;
+  margin-left: 0em;
+  margin-right: 0em;
+  transition: all 0.25s ease;
 }
 
-#custom-dunst,
-#tray,
-#mpris {
-    padding: 0 10px;
-    color: #e0e0e0;
-    background-color: #333333;
+#workspaces button.active {
+  color: #f2f2f2;
+  background-color: transparent;
+  border-radius: 8px;
+  transition: all 0.25s ease;
+}
+
+#workspaces button.empty {
+  color: #d0d0d0;
+  background-color: transparent;
+  border-radius: 8px;
+  transition: all 0.25s ease;
+}
+
+#workspaces button:hover {
+  color: #ffffff;
+  background-color: rgba(80, 80, 80, 0.08) ;
+  border-radius: 4px;
+  transition: all 0.25s ease;
+}
+
+
+/*
+  __  __          _    
+ |  \/  |_ __ _ _(_)___
+ | |\/| | '_ | '_| (_-<
+ |_|  |_| .__|_| |_/__/
+        |_|            
+*/
+
+#mediamod {
+  background-color: #f2f2f2;
+}
+
+#mpris.title.stopped~#mediamod {
+  background-color: transparent;
+}
+
+#mpris.icon {
+  color: #1e1e1e;
+  padding: 0px 14px 0px 10px;
+}
+
+#mpris.title {
+  color: #f2f2f2;
+  background-color: #1e1e1e;
+  font-size: 15px;
+  border-radius: 8px;
+  padding-left: 8px;
+  padding-right: 8px;
+  margin: 1px 1px 1px 0px;
+}
+
+#mpris.title:hover {
+  color: #1e1e1e;
+  background-color: #f2f2f2 ;
+  transition: all 0.25s ease;
+}
+
+
+/*
+ __      ___         _            
+ \ \    / (_)_ _  __| |_____ __ __
+  \ \/\/ /| | ' \/ _` / _ \ V  V /
+   \_/\_/ |_|_||_\__,_\___/\_/\_/ 
+
+*/
+
+#windowmod {
+  background-color: #f2f2f2;
+  padding: 1px 1px 1px 6px;
+}
+
+window#waybar.empty #windowmod,
+windows#waybar.empty #window.title {
+  background-color: transparent;  
+}
+windows#waybar.empty #window.icon {
+  background-color: transparent;
+}
+
+#window.icon {
+  color: #1e1e1e;
+  padding: 0px 9px 0px 3px;
+  margin-right: 0px;
+}
+
+#window.title {
+  color: #f2f2f2;
+  background-color: #1e1e1e;
+  font-size: 15px;
+  border-radius: 8px;
+  padding-left: 8px;
+  padding-right: 8px;
+}
+
+#window.title:hover {
+  color: #1e1e1e;
+  background-color: #f2f2f2 ;
+  transition: all 0.25s ease;
+}
+
+
+/*
+  _____              
+ |_   __ _ __ _ _  _ 
+   | || '_/ _` | || |
+   |_||_| \__,_|\_, |
+                |__/ 
+*/
+
+#tray {
+  margin: 8px 8px 5px 8px;
+  padding: 0px 5px;
+}
+
+
+/*
+  ___      _                     _ _     
+ | _ \_  _| |______ __ _ _  _ __| (_)___ 
+ |  _| || | (_-/ -_/ _` | || / _` | / _ \
+ |_|  \_,_|_/__\___\__,_|\_,_\__,_|_\___/
+
+*/
+
+#audiomod {
+  background-color: #f2f2f2;
+}
+
+#pulseaudio.icon {
+  color: #1e1e1e;
+  padding: 0px 12px 0px 10px;
+}
+
+#pulseaudio.volume {
+  color: #f2f2f2;
+  background-color: #1e1e1e;
+  font-size: 15px;
+  border-radius: 8px;
+  padding-left: 8px;
+  padding-right: 8px;
+  margin: 1px 1px 1px 0px;
+}
+
+#pulseaudio.volume:hover {
+  color: #1e1e1e;
+  background-color: #f2f2f2 ;
+  transition: all 0.25s ease;
+}
+
+
+/*
+  _  _     _                  _   
+ | \| |___| |___ __ _____ _ _| |__
+ | .` / -_|  _\ V  V / _ | '_| / /
+ |_|\_\___|\__|\_/\_/\___|_| |_\_\
+
+*/
+
+#networkmod {
+  background-color: #f2f2f2;
+  padding: 1px 1px 1px 6px;
+}
+
+#network.icon {
+  color: #1e1e1e;
+  padding: 0px 14px 0px 6px;
+  margin-right: 0px;
+}
+
+#network.title {
+  color: #f2f2f2;
+  background-color: #1e1e1e;
+  font-size: 15px;
+  border-radius: 8px;
+  padding-left: 8px;
+  padding-right: 8px;
+}
+
+#network.title:hover {
+  color: #1e1e1e;
+  background-color: #f2f2f2 ;
+  transition: all 0.25s ease;
+}
+
+
+/*
+   ___ _        _   
+  / __| |___ __| |__
+ | (__| / _ / _| / /
+  \___|_\___\__|_\_\
+
+*/
+
+#clockmod {
+  background-color: #f2f2f2;
+}
+
+#clock.icon {
+  color: #1e1e1e;
+  padding: 0px 12px 0px 10px;
+}
+
+#clock.time {
+  color: #f2f2f2;
+  background-color: #1e1e1e;
+  font-size: 15px;
+  border-radius: 8px;
+  padding-left: 8px;
+  padding-right: 8px;
+  margin: 1px 1px 1px 0px;
+}
+
+#clock.time:hover {
+  color: #1e1e1e;
+  background-color: #f2f2f2 ;
+  transition: all 0.25s ease;
+}
+
+
+/*
+  ___                          
+ / ____ __ ____ _ _  _ _ _  __ 
+ \__ \ V  V / _` | || | ' \/ _|
+ |___/\_/\_/\__,_|\_, |_||_\__|
+                  |__/         
+*/
+
+#custom-swaync {
+  color: #f2f2f2;
+  background-color: #1e1e1e;
+  padding: 0px 14px 0px 11px;
+  border: solid 1px #f2f2f2;
+}
+
+#custom-swaync:hover {
+  color: #1e1e1e;
+  background-color: #f2f2f2 ;
+  transition: all 0.25s ease;
+}
+
+
+
+/*
+ __      ___                   _   
+ \ \    / | |___ __ _ ___ _  _| |_ 
+  \ \/\/ /| / _ / _` / _ | || |  _|
+   \_/\_/ |_\___\__, \___/\_,_|\__|
+                |___/              
+*/
+
+#custom-power {
+  color: #1e1e1e;
+  background-color: #f2f2f2;
+  border-radius: 5px;
+  margin-right: 8px;
+  margin-top: 5px;
+  margin-left: 0px;
+  margin-bottom: 5px;
+  padding: 0px 14px 0px 11px;
+}
+
+/*
+  _  _                    
+ | || |_____ _____ _ _ ___
+ | __ / _ \ V / -_| '_(_-<
+ |_||_\___/\_/\___|_| /__/
+
+*/
+
+#custom-power:hover,
+#custom-launcher:hover {
+  color: #f2f2f2;
+  background-color: #1e1e1e;
+  transition: all 0.25s ease;
+}
+
+#tray:hover {
+  background-color: #1e1e1e;
+  border-radius: 5px;
+  transition: all 0.25s ease;
 }

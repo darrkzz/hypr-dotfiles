@@ -4,99 +4,273 @@
 //   \_/\_/\__,_|\_, |_.__\__,_|_|    \___\___|_||_|_| |_\__, |
 //               |__/                                    |___/ 
 
-//  [  ] Autor : Darkz(darrkzz)
+//  [  ] Author : Darkz(darrkzz)
 //  [  ] Github : @darrkzz
 
 {
   "anchor": "center",
-  "clock": {
-    "format": "󰭦 {:%a %d,  %H:%M}",
-    "on-click": "gsimplecal",
-    "tooltip": true,
-    "tooltip-format": "{:%A, %d de %B de %Y}"
-  },
-  "custom/dunst": {
-    "format": "",
-    "on-click": "dunstctl history-pop",
-    "tooltip": false
-  },
+  "height": 40,
+  "spacing": 8,
+  "layer": "top",
+  "position": "top",
+  "margin-left": 10,
+  "margin-right": 10,
+  "margin-bottom": 0,
+  "margin-top": 10,
+  "reload_style_on_change": true,
+
+//  __  __        _      _          ___        
+// |  \/  |___ __| |_  _| |___ ___ | _ \___ ___
+// | |\/| / _ / _` | || | / -_(_-< |  _/ _ (_-<
+// |_|  |_\___\__,_|\_,_|_\___/__/ |_| \___/__/
+//
+
+//         (Left)         //
+    "modules-left": [
+    "custom/launcher",
+    "hyprland/workspaces",
+    "group/mediamod"
+  ],
+
+//         (Center)         //  
+    "modules-center": [
+    "group/windowmod"
+  ],
+
+//         (Right)         //  
+    "modules-right": [
+    "tray",
+    "group/audiomod",
+    "group/networkmod",
+    "group/clockmod",
+    "custom/swaync",
+    "custom/power"
+  ],
+
+
+//  __  __        _      _           ___           __ _      
+// |  \/  |___ __| |_  _| |___ ___  / __|___ _ _  / _(_)__ _ 
+// | |\/| / _ / _` | || | / -_(_-< | (__/ _ | ' \|  _| / _` |
+// |_|  |_\___\__,_|\_,_|_\___/__/  \___\___|_||_|_| |_\__, |
+//                                                     |___/ 
+
+//         (Launcher)         //  
   "custom/launcher": {
-    "format": "",
+    "format": "<span font='15'></span>",
     "on-click": "rofi -show drun",
     "tooltip": false
   },
-  "custom/power": {
-    "format": "⏻",
-    "on-click": "wlogout --buttons-per-row 1"
-  },
-  "height": 40,
+
+//         (Workspaces)         //  
   "hyprland/workspaces": {
     "format": "{icon}",
     "format-icons": {
-      "active": "",
-      "default": ""
+      "active": "<span font='11'></span>",
+      "empty": "<span font='11'></span>",
+      "default": "<span font='11'></span>"
     },
     "on-click": "activate",
     "on-scroll-down": "hyprctl dispatch workspace r-1",
     "on-scroll-up": "hyprctl dispatch workspace r+1",
     "persistent-workspaces": {
-      "*": 3
+      "*": 5
     }
   },
-  "layer": "top",
-  "margin-bottom": 0,
-  "margin-left": 10,
-  "margin-right": 10,
-  "margin-top": 10,
-  "modules-center": [
-    "clock",
-    "custom/dunst"
-  ],
-  "modules-left": [
-    "custom/launcher",
-    "hyprland/workspaces",
-    "tray"
-  ],
-  "modules-right": [
-    "mpris",
-    "pulseaudio",
-    "network",
-    "custom/power"
-  ],
-  "mpris": {
-    "artist-len": 10,
-    "dynamic-len": 50,
-    "format": "󰐊 Reproduzindo : {title} - {artist}",
-    "format-paused": "󰏤 Pausado : {title} - {artist}",
-    "format-stopped": "󰓛 Parado : {tile} - {artist}",
-    "title-len": 15,
+
+//         (Mpris)         //  
+  "mpris#icon": {
+    "interval": 0.5,
+    "format": "<span font='13'>{player_icon}</span>",
+    "format-paused": "<span font='13'>{status_icon}</span>",
+    "format-stoped": "",
+    "on-click-middle":"playerctl play-pause",
+    "on-click": "playerctl previous",
+    "on-click-right": "playerctl next",
+    "tooltip": true,
+    "tooltip-format": "{dynamic} \nBotão Esquerdo: Voltar\nBotão do Meio: Pausar\nBotão Direito: Avançar",
+    "player-icons": {
+      "chromium": "",
+      "default": "",
+      "firefox": "",
+      "mpv": "",
+      "spotify": "",
+      "vlc": "󰕼" 
+    },
+    "status-icons": {
+      "paused": "",
+      "playing": "",
+      "stopped": ""
+    }
+  },
+  "mpris#title": {
+    "interval": 0.5,
+    "format": "{title} - {artist}",
+    "format-stopped": "",
+    "on-click-middle": "playerctl play-pause",
+    "on-click": "playerctl previous",
+    "on-click-right": "playerctl next",
+    "max-length": 35,
+    "scroll": true,
+    "scroll-speed": 0.7,
+    "scroll-delay": 1.5, 
+    "tooltip": true,
+    "tooltip-format": "{dynamic}\nBotão Esquerdo: Voltar\nBotão do Meio: Pausar\nBotão Direito: Avançar"
+  },
+   "group/mediamod": {
+    "orientation": "horizontal",
+    "modules":
+    [
+      "mpris#icon",
+      "mpris#title"
+    ]
+  },
+
+//         (Window Mod)         //
+  "hyprland/window#icon": {
+    "format": "",
+    "empty-stripped": true,
+    "icon": true,
+    "icon-size": 20,
+    "offscreen-css": true,
+    "offscreen-css-text": "(inactive)"
+  },
+  "hyprland/window#title": {
+    "format": "{}",
+    "empty-stripped": true,
+    "max-length": 25,
+    "separate-outputs": true,
+    "offscreen-css": true,
+    "offscreen-css-text": "(inactive)"
+  },
+  "group/windowmod": {
+    "orientation": "horizontal",
+    "modules":
+    [
+      "hyprland/window#icon",
+      "hyprland/window#title"
+    ]
+  },
+
+  //         (Tray)         //
+  "tray": {
+    "icon-size": 19,
+    "spacing": 8,
     "tooltip": false
   },
-  "network": {
-    "format-disconnected": "󰕑 Error 404",
-    "format-ethernet": "󰈀 Ethernet",
-    "format-wifi": "󰖩 {signalStrength}%",
-    "on-click": "nm-connection-editor"
-  },
-  "position": "top",
-  "pulseaudio": {
-    "format": "{icon} {volume}%",
+
+//         (Pulseaudio)         //  
+  "pulseaudio#icon": {
+    "format": "<span font='14'>{icon}</span>",
+    "format-muted": "<span font='14'>󰝟</span>",
     "format-icons": {
       "default": [
         "󰕿",
         "󰖀",
         "󰕾"
       ]
-    },
-    "format-muted": "󰟎 Mutado",
-    "on-click": "pamixer -t",
+    },    
+    "on-click": "wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle",
     "on-click-right": "pavucontrol",
-    "on-scroll-down": "pamixer -d 5",
-    "on-scroll-up": "pamixer -i 5"
+    "on-scroll-down": "wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%-",
+    "on-scroll-up": "wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%+",
+    "tooltip": true,
+    "tooltip-format": "Botão Esquerdo: Muta o som \nBotão Direito: Pavucontrol \nScroll pra cima: +5% \nScroll pra baixo: -5%"
   },
-  "reload_style_on_change": true,
-  "spacing": 8,
-  "tray": {
-    "spacing": 10
+  "pulseaudio#volume": {
+    "format": "{volume}%",
+    "format-muted": "Mutado",
+    "on-click": "wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle",
+    "on-click-right": "pravucontrol",
+    "on-scroll-down": "pamixer -d 5",
+    "on-scroll-up": "pamixer -i 5",
+    "tooltip": true,
+    "tooltip-format": "Botão Esquerdo: Muta o som \nBotão Direito: Pavucontrol \nScroll pra cima: +5% \nScroll pra baixo: -5%"
+  },
+  "group/audiomod": {
+    "orientation": "horizontal",
+    "modules":
+    [
+      "pulseaudio#icon",
+      "pulseaudio#volume"
+    ]
+
+  },
+
+//         (Network)         //  
+  "network#icon": {
+    "format-disconnected": "<span font='13'󰕑</span>",
+    "format-ethernet": "<span font='13'>󰈀</span>",
+    "format-wifi": "<span font='13'>󰖩</span>",
+    "on-click": "nm-connection-editor",
+    "tooltip": true,
+    "tooltip-format": "Botão Esquerdo: Network Manager"
+  },
+  "network#title": {
+    "format-disconnected": "Error 404",
+    "format-ethernet": "Ethernet",
+    "format-wifi": "Wifi {signalStrength}%",
+    "on-click": "nm-connection-editor",
+    "tooltip": true,
+    "tooltip-format": "Botão Esquerdo: Network Manager"
+  },
+  "group/networkmod": {
+    "orientation": "horizontal",
+    "modules":
+    [
+     "network#icon",
+     "network#title" 
+    ]
+  },
+
+//         (Clock)         //
+  "clock#icon": {
+    "format": "<span font='13'>󰃰</span>",
+    "on-click": "gsimplecal",
+    "tooltip": true,
+    "tooltip-format": "{:%A, %d / %B / %Y}"
+  },
+  "clock#time":{
+    "format": "{:%a %d, %H:%M}",
+    "on-click": "gsimplecal",
+    "tooltip": true,
+    "tooltip-format": "{:%A, %d / %B / %Y}"
+  },
+  "group/clockmod": {
+    "orientation": "horizontal",
+    "modules": 
+    [
+     "clock#icon",
+     "clock#time"
+    ]
+  },
+
+//         (Swaync)         //
+  "custom/swaync": {
+    "format": "<span font='13'>{icon}</span>",
+    "format-icons": {
+      "notification": "󱅫",
+      "none": "󰂚",
+      "dnd-notification": "󱏧",
+      "dnd-none": "󱏧",
+      "inhibited-notification": "󱅫",
+      "inhibited-none": "󰂚",
+      "dnd-inhibited-notification": "󱏧",
+      "dnd-inhibited-none": "󱏧"
+  },
+    "return-type": "json",
+    "exec-if": "which swaync-client",
+    "escape": true,
+    "exec": "swaync-client -swb",
+    "on-click": "swaync-client -t",
+    "on-click-right": "swaync-client -d",
+    "tooltip": true,
+    "tooltip-format": "Botão Esquerdo: Centro de Notificações \nBotão Direito: Alternar modo Não Pertube"
+  },
+
+//         (Power)         //  
+  "custom/power": {
+    "format": "⏻",
+    "on-click": "~/.config/waybar/scripts/wlogout.sh",
+    "tooltip": false 
   }
 }

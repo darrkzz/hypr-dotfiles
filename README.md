@@ -1,6 +1,6 @@
-# .Dotfiles Hyprland (Graphite Color Scheme)
+# 🗂️ .Dotfiles Hyprland (Graphite Color Scheme) 🌑
 
-### What is included in this dotfiles currently?
+### 🎨 What is included in this dotfiles currently?
 
 - Btop
 - Fastfetch
@@ -13,11 +13,11 @@
 - Waybar (with custom scripts)
 - Wlogout
 
-### Requeriments:
+### ⚠️ Requeriments:
 
 - All packages listed above
 - JetBrainsMono Nerd Font
 - Swaync
 
-# Preview of Dotfiles:
+# 👓 Preview of Dotfiles:
 <img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/c52be35e-36df-4b5c-a85f-10c8693fa97e" />

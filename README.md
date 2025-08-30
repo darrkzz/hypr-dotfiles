@@ -12,6 +12,8 @@ These are my dotfiles that I use for Hyprland, in the 'Graphite' color scheme, f
   - ![#d0d0d0](https://placehold.co/15x15/d0d0d0/d0d0d0.png)⠀`#d0d0d0`
   - ![#505050](https://placehold.co/15x15/505050/505050.png)⠀`#505050`
   
+> [!NOTE]  
+> I'm a beginner in Linux, as I learn I improve and add more things here and to dotfiles
 
 ## 🎨 What is included in this dotfiles currently?
 
@@ -31,6 +33,3 @@ These are my dotfiles that I use for Hyprland, in the 'Graphite' color scheme, f
 - All packages listed above
 - JetBrainsMono Nerd Font
 - Swaync
-
-> [!NOTE]  
-> I'm a beginner in Linux, as I learn I improve and add more things here and to dotfiles

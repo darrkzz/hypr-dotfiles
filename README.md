@@ -1,4 +1,4 @@
-# Dotfiles (Graphite Color Scheme)
+# .Dotfiles Hyprland (Graphite Color Scheme)
 
 ### What is included in this dotfiles currently?
 

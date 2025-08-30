@@ -9,6 +9,7 @@ These are my dotfiles that I use for Hyprland, in the 'Graphite' color scheme, f
   - #A0A0A0
   - #D0D0D0
   - #505050
+  
 
 ## 🎨 What is included in this dotfiles currently?
 
@@ -29,7 +30,7 @@ These are my dotfiles that I use for Hyprland, in the 'Graphite' color scheme, f
 - JetBrainsMono Nerd Font
 - Swaync
 
-
+  
 > ❕ **I'm a beginner in Linux, as I learn I improve and add more things here and to dotfiles**
 
 # 👓 Preview of Dotfiles:

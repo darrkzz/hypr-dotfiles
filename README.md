@@ -1,6 +1,6 @@
 # 🗂️ .Dotfiles Hyprland (Graphite Color Scheme) 🌑
 These are my dotfiles that I use for Hyprland, in the 'Graphite' color scheme, feel free to use the dotfiles or for inspiration!
-Base Color Palette Codes:
+**Base Color Palette Codes:**
 - #1E1E1E
 - #2A2A2A 
 - #3C3C3C

@@ -30,8 +30,8 @@ These are my dotfiles that I use for Hyprland, in the 'Graphite' color scheme, f
 - JetBrainsMono Nerd Font
 - Swaync
 
-  
-> ❕ **I'm a beginner in Linux, as I learn I improve and add more things here and to dotfiles**
+> ![NOTE]  
+> I'm a beginner in Linux, as I learn I improve and add more things here and to dotfiles
 
 # 👓 Preview of Dotfiles:
 <img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/c52be35e-36df-4b5c-a85f-10c8693fa97e" />

@@ -24,6 +24,7 @@ These are my dotfiles that I use for Hyprland, in the 'Graphite' color scheme, f
 - Lazyvim (not completed)
 - Rofi
 - Spicetify (`spotifytui` with custom colors)
+- Superfile
 - Vesktop (Custom color with `quick.css`)
 - Waybar (with custom scripts)
 - Wlogout

@@ -19,14 +19,20 @@ These are my dotfiles that I use for Hyprland, in the 'Graphite' color scheme, f
 
 - Btop
 - Fastfetch
+  - With custom logo
 - Kitty
+  - With custom colors
 - Kvantum
-- Lazyvim (not completed)
+- Lazyvim 
+  - ~~Not completed/broken~~
 - Rofi
-- Spicetify (`spotifytui` with custom colors)
+- Spicetify 
+  - `spotifytui` with custom colors
 - Superfile
-- Vesktop (Custom color with `quick.css`)
-- Waybar (with custom scripts)
+- Vesktop 
+  - Custom color with `quick.css`
+- Waybar
+  - With custom scripts
 - Wlogout
 
 ## ⚠️ Requeriments:

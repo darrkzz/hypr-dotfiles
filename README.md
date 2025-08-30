@@ -31,6 +31,6 @@ These are my dotfiles that I use for Hyprland, in the 'Graphite' color scheme, f
 
 ## ⚠️ Requeriments:
 
-- All packages listed above
+- All packages listed [above](https://github.com/darrkzz/hypr-dotfiles/tree/color-graphite?tab=readme-ov-file#-what-is-included-in-this-dotfiles-currently)
 - JetBrainsMono Nerd Font
 - Swaync

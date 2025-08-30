@@ -1,8 +1,8 @@
 # 🗂️ .Dotfiles Hyprland (Graphite Color Scheme) 🌑
 These are my dotfiles that I use for Hyprland, in the 'Graphite' color scheme, feel free to use the dotfiles or for inspiration!  
 - 🖌️ **Base Color Palette Codes:**
-  - ![#1e1e1e](https://placehold.co/15x15/1e1e1e/1e1e1e.png) `#1e1e1e`
-  - #2A2A2A 
+  - ![#1e1e1e](https://placehold.co/20x20/1e1e1e/1e1e1e.png) `#1e1e1e`
+  - ![#2a2a2a](https://placehold.co/15x15/2a2a2a/2a2a2a.png) `#2a2a2a` 
   - #3C3C3C
   - #3F3F3F
   - #F2F2F2
